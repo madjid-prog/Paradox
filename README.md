@@ -1,4 +1,4 @@
-<h1 align= center><b>⭐️ VENZ X MUSIC ⭐️</b></h1>
+<h1 align= center><b>⭐️ VENZMUSIC ⭐️</b></h1>
 <h3 align = center> Multi-Assistant | Video Calls | Voice Calls | Heroku Supported</h3>
 
 <p align="center">
@@ -95,3 +95,4 @@ Special thanks to these amazing projects/people which/who help power Yukki Music
 - [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
 - [CallsMusic Team](https://github.com/Callsmusic)
 - [TheHamkerCat](https://github.com/TheHamkerCat)
+- [Notreallyshinkar](https://github.com/Notreallyshinkar)
