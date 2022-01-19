@@ -1,6 +1,6 @@
 from youtubesearchpython import VideosSearch
 import asyncio
-from Yukki.Utilities.changers import time_to_seconds
+from Venz.Utilities.changers import time_to_seconds
 
 
 def get_yt_info_id(videoid):
