@@ -1,7 +1,7 @@
 {
-  "name": "venzxmusic",
+  "name": "officialvenz",
   "description": "A Telegram Music Bot with proper functions written in Python with Pyrogram and Py-Tgcalls.",
-  "repository": "https://github.com/elskuyy/venzxmusic",
+  "repository": "https://github.com/eldy020502/officialvenz",
   "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
   "keywords": [
   "python3",
@@ -12,7 +12,7 @@
   "telegram-bot",
   "pyrogram"
   ],
-  "repository": "https://github.com/elskuyy/venzxmusic",
+  "repository": "https://github.com/eldy020502/officialvenz",
   "stack": "container",
   "env": {
     "API_ID": {
@@ -32,7 +32,7 @@
     },
     "DURATION_LIMIT": {
       "description": "Duration Limit for Playout (In Mins).. Example: 130",
-      "value": "130",
+      "value": "150",
       "required": true
     },
     "ASSISTANT_PREFIX": {
@@ -117,7 +117,7 @@
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/elskuyy/venzxmusic",
+      "value": "https://github.com/eldy020502/officialvenz",
       "required": true
     },
     "UPSTREAM_BRANCH": {
