@@ -4,14 +4,14 @@
 <p align="center">
 <a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python"></a>
 <br>
-    <img src="https://img.shields.io/github/license/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="LICENSE">
-    <img src="https://img.shields.io/github/contributors/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Contributors">
-    <img src="https://img.shields.io/github/repo-size/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Repository Size"> <br>
-    <img src="https://img.shields.io/github/forks/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Forks">
-    <img src="https://img.shields.io/github/stars/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Stars">
-    <img src="https://img.shields.io/github/watchers/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Watchers">
-    <img src="https://img.shields.io/github/commit-activity/w/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Commit Activity">
-    <img src="https://img.shields.io/github/issues/notreallyshikhar/YukkiMusicBot?style=for-the-badge" alt="Issues">
+    <img src="https://img.shields.io/github/license/eldy020502/officialvenz?style=for-the-badge" alt="LICENSE">
+    <img src="https://img.shields.io/github/contributors/eldy020502/officialvenz?style=for-the-badge" alt="Contributors">
+    <img src="https://img.shields.io/github/repo-size/eldy020502/officialvenz?style=for-the-badge" alt="Repository Size"> <br>
+    <img src="https://img.shields.io/github/forks/eldy020502/officialvenz?style=for-the-badge" alt="Forks">
+    <img src="https://img.shields.io/github/stars/eldy020502/officialvenz?style=for-the-badge" alt="Stars">
+    <img src="https://img.shields.io/github/watchers/eldy020502/officialvenz?style=for-the-badge" alt="Watchers">
+    <img src="https://img.shields.io/github/commit-activity/w/eldy020502/officialvenz?style=for-the-badge" alt="Commit Activity">
+    <img src="https://img.shields.io/github/issues/eldy020502/officialvenz?style=for-the-badge" alt="Issues">
 </p>
 
 <h3 align="center">
@@ -20,8 +20,8 @@
 
 <p align="center">
     A Support Group and ready-to-use running instance of this bot can be found on Telegram <br>
-    <a href="https://t.me/YukkiRobot"> YukkiMusicBot </a> |
-    <a href="https://t.me/OfficialYukkiSupport"> YukkiSupport </a>
+    <a href="https://t.me/venzastreambot"> venz X bot </a> |
+    <a href="https://t.me/justvenzzz"> VenzSupport </a>
 </p>
     
 <h1 align="center">
@@ -59,7 +59,7 @@ bash start
 
 ## 🔗 Deploy on Heroku
 <p>
-<a href="https://dashboard.heroku.com/new?template=https://github.com/elskuyy/venzxmusic/"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  </p>
+<a href="https://dashboard.heroku.com/new?template=https://github.com/eldy020502/officialvenz/"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  </p>
 
 ## 🔗 Generating Pyrogram Session
 <p>
@@ -71,9 +71,9 @@ bash start
 
 - [Telegram Channel](https://t.me/someonefromyou")
 - [Telegram Support Group](https://t.me/justvenzzz)
-- [Contact Owner](https://t.me/iniidnyael)
+- [Contact Owner](https://t.me/vnotv)
 
-## Why Yukki?
+## Why venz?
     
 - Light and Fast Responsive
 - Includes Multi-Assistant Mode where you can use 5 Assistant Accounts for large number of chats.
