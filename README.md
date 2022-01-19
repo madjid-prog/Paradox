@@ -36,27 +36,6 @@
 - [MongoDB URI](https://telegra.ph/How-To-get-Mongodb-URI-04-06)
 
 
-## 🔗 Install Locally or On a VPS(Debian based)
-
-```console
-sudo apt-get update && sudo apt-get upgrade -y
-sudo apt-get install python3-pip ffmpeg -y
-sudo pip3 install -U pip
-curl -fssL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-sudo apt-get install nodejs -y
-npm i -g npm
-git clone https://github.com/notreallyshikhar/YukkiMusicBot
-cd YukkiMusicBot
-pip3 install -U -r requirements.txt
-cp sample.env .env
-```
-
-- Edit <b>.env</b> with your own values and Run Bot
-
-```console
-bash start
-```
-
 ## 🔗 Deploy on Heroku
 <p>
 <a href="https://dashboard.heroku.com/new?template=https://github.com/eldy020502/officialvenz/"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="250""/</a>  </p>
@@ -64,7 +43,6 @@ bash start
 ## 🔗 Generating Pyrogram Session
 <p>
 <a href="https://replit.com/@AaravxD/PyroStringSession#main.py"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="245""/></a>
-<a href="https://t.me/YukkiStringBot"><img src="https://img.shields.io/badge/TG%20String%20Gen%20Bot-blueviolet?style=for-the-badge&logo=appveyor" width="245""/></a></p>
 
 ## Contact & Support
 
@@ -89,7 +67,7 @@ Distributed under the [GNU General Public License v3.0 License.](https://github.
 
 ## Acknowledgements
 
-Special thanks to these amazing projects/people which/who help power Yukki Music Bot:
+Special thanks to these amazing projects/people which/who help power Venz Music Bot:
 
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
