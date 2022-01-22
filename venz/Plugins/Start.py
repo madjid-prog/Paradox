@@ -9,22 +9,22 @@ from pyrogram import filters
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from Yukki import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, random_assistant
-from Yukki import boottime as bot_start_time
-from Yukki import db
-from Yukki.Core.PyTgCalls import Yukki
-from Yukki.Database import (add_nonadmin_chat, add_served_chat,
+from Venz import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, random_assistant
+from Venz import boottime as bot_start_time
+from Venz import db
+from Venz.Core.PyTgCalls import Yukki
+from Venz.Database import (add_nonadmin_chat, add_served_chat,
                             blacklisted_chats, get_assistant, get_authuser,
                             get_authuser_names, get_start, is_nonadmin_chat,
                             is_served_chat, remove_active_chat,
                             remove_nonadmin_chat, save_assistant, save_start)
-from Yukki.Decorators.admins import ActualAdminCB
-from Yukki.Decorators.permission import PermissionCheck
-from Yukki.Inline import (custommarkup, dashmarkup, setting_markup,
+from Venz.Decorators.admins import ActualAdminCB
+from Venz.Decorators.permission import PermissionCheck
+from Venz.Inline import (custommarkup, dashmarkup, setting_markup,
                           setting_markup2, start_pannel, usermarkup,
                           volmarkup)
-from Yukki.Utilities.assistant import get_assistant_details
-from Yukki.Utilities.ping import get_readable_time
+from Venz.Utilities.assistant import get_assistant_details
+from Venz.Utilities.ping import get_readable_time
 
 welcome_group = 2
 
@@ -33,15 +33,15 @@ __HELP__ = """
 
 
 /start 
-- Start the Bot.
+- Mulai Bot.
 
 
 /help 
-- Get Commands Helper Menu.
+- Dapatkan Menu Pembantu Perintah.
 
 
 /settings 
-- Get Settings button.
+- Dapatkan tombol Pengaturan.
 """
 
 
@@ -57,7 +57,7 @@ async def welcome(_, message: Message):
             if member.id == BOT_ID:
                 if chat_id in await blacklisted_chats():
                     await message.reply_text(
-                        f"Hushh, Your chat group[{message.chat.title}] has been blacklisted!\n\nAsk any Sudo User to whitelist your chat"
+                        f"Hushh, grup obrolan Anda[{message.chat.title}] telah masuk daftar hitam!\n\nMinta Pengguna Sudo untuk memasukkan obrolan Anda ke daftar putih"
                     )
                     return await app.leave_chat(chat_id)
                 _assistant = await get_assistant(message.chat.id, "assistant")
@@ -77,18 +77,18 @@ async def welcome(_, message: Message):
                 ) = await get_assistant_details(ran_ass)
                 out = start_pannel()
                 await message.reply_text(
-                    f"Welcome To {MUSIC_BOT_NAME}\n\nPromote me as administrator in your group otherwise I will not function properly.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
+                    f"Selamat Datang di {MUSIC_BOT_NAME}\n\nPromosikan saya sebagai administrator di grup Anda jika tidak, saya tidak akan berfungsi dengan baik.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
                     reply_markup=InlineKeyboardMarkup(out[1]),
                 )
             if member.id in ASSIDS:
                 return await remove_active_chat(chat_id)
             if member.id in OWNER_ID:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
+                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] Telah join ke grub anda."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
-                    f"A member of {MUSIC_BOT_NAME}'s Sudo User[{member.mention}] has just joined your chat."
+                    f"Anggota dari {MUSIC_BOT_NAME}'s Pengguna Sudo[{member.mention}] baru saja bergabung dengan obrolan Anda."
                 )
             return
         except:
@@ -102,7 +102,7 @@ async def useradd(_, message: Message):
     await asyncio.gather(
         message.delete(),
         message.reply_text(
-            f"Thanks for having me in {message.chat.title}.\n{MUSIC_BOT_NAME} is alive.\n\nFor any assistance or help, checkout our support group and channel.",
+            f"Terima kasih telah memasukkan saya {message.chat.title}.\n{MUSIC_BOT_NAME} hidup.\n\nUntuk bantuan atau bantuan apa pun, periksa grup dan channel dukungan kami.",
             reply_markup=InlineKeyboardMarkup(out[1]),
         ),
     )
@@ -136,7 +136,7 @@ async def okaybhai(_, CallbackQuery):
     await CallbackQuery.answer("Going Back ...")
     out = start_pannel()
     await CallbackQuery.edit_message_text(
-        text=f"Thanks for having me in {CallbackQuery.message.chat.title}.\n{MUSIC_BOT_NAME}is alive.\n\nFor any assistance or help, checkout our support group and channel.",
+        text=f"Terima kasih telah memasukkan saya {CallbackQuery.message.chat.title}.\n{MUSIC_BOT_NAME} hidup.\n\nUntuk bantuan atau bantuan apa pun, periksa grup dan channel dukungan kami.",
         reply_markup=InlineKeyboardMarkup(out[1]),
     )
 
@@ -260,7 +260,7 @@ async def start_markup_check(_, CallbackQuery):
         }
         volume = 25
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -276,7 +276,7 @@ async def start_markup_check(_, CallbackQuery):
         }
         volume = 50
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -292,7 +292,7 @@ async def start_markup_check(_, CallbackQuery):
         }
         volume = 100
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -308,7 +308,7 @@ async def start_markup_check(_, CallbackQuery):
         }
         volume = 200
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -330,7 +330,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -352,7 +352,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -374,7 +374,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -396,7 +396,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -418,7 +418,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -440,7 +440,7 @@ async def start_markup_check(_, CallbackQuery):
             "volume": volume,
         }
         try:
-            await Yukki.pytgcalls.change_volume_call(c_id, volume)
+            await Venz.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
             return await CallbackQuery.answer("No active Group Call...")
@@ -456,15 +456,15 @@ async def start_markup_check(_, CallbackQuery):
         _playlist = await get_authuser_names(CallbackQuery.message.chat.id)
         if not _playlist:
             return await CallbackQuery.edit_message_text(
-                text=f"{text}\n\nNo Authorized Users Found\n\nYou can allow any non-admin to use my admin commands by /auth and delete by using /unauth",
+                text=f"{text}\n\nTidak Ada Pengguna Resmi Ditemukan\n\nAnda dapat mengizinkan non-admin untuk menggunakan perintah admin saya dengan /auth dan hapus dengan menggunakan /unauth",
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
         else:
             j = 0
             await CallbackQuery.edit_message_text(
-                "Fetching Authorised Users... Please Wait"
+                "Mengambil Pengguna Resmi... Harap Tunggu"
             )
-            msg = f"**Authorised Users List[AUL]:**\n\n"
+            msg = f"**Daftar Pengguna Resmi[AUL]:**\n\n"
             for note in _playlist:
                 _note = await get_authuser(
                     CallbackQuery.message.chat.id, note
@@ -503,5 +503,5 @@ async def start_markup_check(_, CallbackQuery):
     if command == "DIT":
         diske = psutil.disk_usage("/").percent
         await CallbackQuery.answer(
-            f"Yukki Disk Usage: {diske}%", show_alert=True
+            f"Venz Disk Usage: {diske}%", show_alert=True
         )
