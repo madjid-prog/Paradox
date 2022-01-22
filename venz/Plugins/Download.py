@@ -11,9 +11,9 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InputMediaDocument, InputMediaVideo, Message)
 from youtubesearchpython import VideosSearch
 
-from Yukki import MUSIC_BOT_NAME, app
-from Yukki.Utilities.changers import time_to_seconds
-from Yukki.Utilities.download import get_formats, get_type
+from Venz import MUSIC_BOT_NAME, app
+from Venz.Utilities.changers import time_to_seconds
+from Venz.Utilities.download import get_formats, get_type
 
 user_time = {}
 flex = {}
@@ -117,12 +117,12 @@ async def boom(_, CallbackQuery):
         fetched = f"""
 🔍**Track Downloaded**
 
-❇️**Title:** {title}
+❇️**Judul:** {title}
 
-⏳**Duration:** {duration} Mins
+⏳**Durasi:** {duration} Mins
 👀**Views:** `{views}`
-🎥**Channel Name:** {channel}
-🔗**Video Link:** [Link]({yturl})
+🎥**Nama Channel:** {channel}
+🔗**Link Vidio:** [Link]({yturl})
 
 ⚡️ __Youtube Inline Download Powered By {MUSIC_BOT_NAME}__"""
     filext = "%(title)s.%(ext)s"
