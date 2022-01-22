@@ -18,21 +18,21 @@ from pyrogram.types import Message
 from pymongo import MongoClient
 from config import MONGO_DB_URI, MUSIC_BOT_NAME
 from config import STRING5, STRING4, STRING3, STRING2, STRING1
-from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
+from Venz import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    BOT_ID, MUSIC_BOT_NAME, SUDOERS, app, boottime)
-from Yukki.Database import get_gbans_count, get_served_chats, get_sudoers
-from Yukki.Inline import (stats1, stats2, stats3, stats4, stats5, stats6,
+from Venz.Database import get_gbans_count, get_served_chats, get_sudoers
+from Venz.Inline import (stats1, stats2, stats3, stats4, stats5, stats6,
                           stats7)
-from Yukki.Plugins import ALL_MODULES
-from Yukki.Utilities.ping import get_readable_time
+from Venz.Plugins import ALL_MODULES
+from Venz.Utilities.ping import get_readable_time
 
 __MODULE__ = "Stats"
 __HELP__ = """
 
 
 /stats
-- Check the Stats of Bot.
-- Gets the stat of MongoDb , Assistant, System etc
+- Periksa Statistik Bot.
+- Dapatkan status MongoDb, Asisten, Sistem, dll
 """
 
 
@@ -153,7 +153,7 @@ async def stats_markup(_, CallbackQuery):
             print(e)
             return await CallbackQuery.edit_message_text("Failed to get Mongo DB stats", reply_markup=stats5)
         try:
-            db = pymongo.Yukki
+            db = pymongo.Venz
         except Exception as e:
             print(e)
             return await CallbackQuery.edit_message_text("Failed to get Mongo DB stats", reply_markup=stats5)
