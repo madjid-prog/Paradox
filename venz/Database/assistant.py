@@ -1,7 +1,7 @@
 
 from typing import Dict, List, Union
 
-from Yukki import db
+from Venz import db
 
 assisdb = db.assistantmultimode
 
