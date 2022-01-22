@@ -69,7 +69,7 @@ async def useradd(_, message: Message):
             await message.reply_text(
                 f"Ditambahkan **{user.mention}** untuk Pengguna Sudo."
             )
-            os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
+            os.system(f"kill -9 {os.getpid()} && python3 -m Venz")
         else:
             await message.reply_text("Failed")
         return
@@ -82,7 +82,7 @@ async def useradd(_, message: Message):
         await message.reply_text(
             f"Ditambahkan **{message.reply_to_message.from_user.mention}** untuk Pengguna Sudo"
         )
-        os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
+        os.system(f"kill -9 {os.getpid()} && python3 -m Venz")
     else:
         await message.reply_text("Failed")
     return
@@ -123,7 +123,7 @@ async def userdel(_, message: Message):
         await message.reply_text(
             f"DIHAPUS **{mention}** dari {MUSIC_BOT_NAME}'s Sudo."
         )
-        return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
+        return os.system(f"kill -9 {os.getpid()} && python3 -m Venz")
     await message.reply_text(f"Sesuatu yang salah terjadi.")
 
 
