@@ -3,9 +3,9 @@ from typing import Dict, List, Union
 
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 
-from Yukki import MUSIC_BOT_NAME, app, random_assistant
-from Yukki.Database import get_assistant, save_assistant
-from Yukki.Utilities.assistant import get_assistant_details
+from Venz import MUSIC_BOT_NAME, app, random_assistant
+from Venz.Database import get_assistant, save_assistant
+from Venz.Utilities.assistant import get_assistant_details
 
 
 def AssistantAdd(mystic):
@@ -32,11 +32,11 @@ def AssistantAdd(mystic):
             b = await app.get_chat_member(message.chat.id, ASS_ID)
             if b.status == "kicked":
                 return await message.reply_text(
-                    f"Assistant Account[{ASS_ID}] is banned.\nUnban it first to use Music Bot\n\nUsername: @{ASS_USERNAME}"
+                    f"Akun Asisten[{ASS_ID}] Telah diBan.\nUnban untuk menggunakan Bot Musik\n\nUsername: @{ASS_USERNAME}"
                 )
             if b.status == "banned":
                 return await message.reply_text(
-                    f"Assistant Account[{ASS_ID}] is banned.\nUnban it first to use Music Bot\n\nUsername: @{ASS_USERNAME}"
+                    f"Akun Asisten[{ASS_ID}] Telah diBan.\nUnban untuk menggunakan Bot Musik\n\nUsername: @{ASS_USERNAME}"
                 )
         except UserNotParticipant:
             if message.chat.username:
@@ -46,7 +46,7 @@ def AssistantAdd(mystic):
                     pass
                 except Exception as e:
                     await message.reply_text(
-                        f"__Assistant Failed To Join__\n\n**Reason**: {e}"
+                        f"__Asisten Gagal Bergabung__\n\n**Alasan**: {e}"
                     )
                     return
             else:
@@ -60,13 +60,13 @@ def AssistantAdd(mystic):
                         )
                     await ASS_ACC.join_chat(invitelink)
                     await message.reply(
-                        f"{ASS_NAME} Joined Successfully",
+                        f"{ASS_NAME} Berhasil Bergabung",
                     )
                 except UserAlreadyParticipant:
                     pass
                 except Exception as e:
                     await message.reply_text(
-                        f"__Assistant Failed To Join__\n\n**Reason**: {e}"
+                        f"__Asisten Gagal Bergabung__\n\n**Alasan**: {e}"
                     )
                     return
         return await mystic(_, message)
