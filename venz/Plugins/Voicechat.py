@@ -9,12 +9,12 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 
 from config import get_queue
-from Yukki import SUDOERS, app, db_mem, random_assistant
-from Yukki.Database import (get_active_chats, get_assistant, is_active_chat,
+from Venz import SUDOERS, app, db_mem, random_assistant
+from Venz.Database import (get_active_chats, get_assistant, is_active_chat,
                             save_assistant)
-from Yukki.Decorators.checker import checker, checkerCB
-from Yukki.Inline import primary_markup
-from Yukki.Utilities.assistant import get_assistant_details
+from Venz.Decorators.checker import checker, checkerCB
+from Venz.Inline import primary_markup
+from Venz.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
@@ -22,19 +22,19 @@ __MODULE__ = "Join/Leave"
 __HELP__ = """
 
 **Note:**
-Only for Sudo Users
+Hanya untuk Pengguna Sudo
 
 
 /joinassistant [Chat Username or Chat ID]
-- Join assistant to a group.
+- Bergabunglah dengan asisten ke grup.
 
 
 /leaveassistant [Chat Username or Chat ID]
-- Assistant will leave the particular group.
+- Asisten akan meninggalkan grup tertentu.
 
 
 /leavebot [Chat Username or Chat ID]
-- Bot will leave the particular chat.
+- Bot akan meninggalkan obrolan tertentu.
 """
 
 
