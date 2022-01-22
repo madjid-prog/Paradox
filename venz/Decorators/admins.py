@@ -1,18 +1,18 @@
 from typing import Dict, List, Union
 
-from Yukki import SUDOERS, app
-from Yukki.Database import (_get_authusers, add_nonadmin_chat,
+from Venz import SUDOERS, app
+from Venz.Database import (_get_authusers, add_nonadmin_chat,
                             delete_authuser, get_authuser, get_authuser_count,
                             get_authuser_names, is_nonadmin_chat,
                             remove_nonadmin_chat, save_authuser)
-from Yukki.Utilities.changers import int_to_alpha
+from Venz.Utilities.changers import int_to_alpha
 
 
 def AdminRightsCheck(mystic):
     async def wrapper(_, message):
         if message.sender_chat:
             return await message.reply_text(
-                "You're an __Anonymous Admin__!\nRevert back to User Account."
+                "Anda adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna."
             )
         is_non_admin = await is_nonadmin_chat(message.chat.id)
         if not is_non_admin:
@@ -25,7 +25,7 @@ def AdminRightsCheck(mystic):
                     _check = await get_authuser_names(message.chat.id)
                     if token not in _check:
                         return await message.reply(
-                            "You don't have the required permission to perform this action.\n\n__REQUIRES ADMIN WITH MANAGE VC RIGHTS__"
+                            "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\n\n_ MEMBUTUHKAN ADMIN DENGAN HAK MENGELOLA VC _"
                         )
         return await mystic(_, message)
 
@@ -36,14 +36,14 @@ def AdminActual(mystic):
     async def wrapper(_, message):
         if message.sender_chat:
             return await message.reply_text(
-                "You're an __Anonymous Admin__!\nRevert back to User Account."
+                "Anda adalah __Admin Anonim__!\nKembalikan ke Akun Pengguna."
             )
         member = await app.get_chat_member(
             message.chat.id, message.from_user.id
         )
         if not member.can_manage_voice_chats:
             return await message.reply(
-                "You don't have the required permission to perform this action.\n\n__REQUIRES ADMIN WITH MANAGE VC RIGHTS__"
+                "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\n\n_ MEMBUTUHKAN ADMIN DENGAN HAK MENGELOLA VC _"
             )
         return await mystic(_, message)
 
@@ -65,7 +65,7 @@ def AdminRightsCheckCB(mystic):
                     )
                     if token not in _check:
                         return await CallbackQuery.answer(
-                            "You don't have the required permission to perform this action.\nPermission: MANAGE VOICE CHATS",
+                            "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\nIzin: MENGELOLA VOICE CHATS",
                             show_alert=True,
                         )
         return await mystic(_, CallbackQuery)
@@ -80,7 +80,7 @@ def ActualAdminCB(mystic):
         )
         if not a.can_manage_voice_chats:
             return await CallbackQuery.answer(
-                "You don't have the required permission to perform this action.\nPermission: MANAGE VOICE CHATS",
+                "Anda tidak memiliki izin yang diperlukan untuk melakukan tindakan ini.\nIzin: MENGELOLA VOICE CHATS",
                 show_alert=True,
             )
         return await mystic(_, CallbackQuery)
