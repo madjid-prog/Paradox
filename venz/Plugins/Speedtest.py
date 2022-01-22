@@ -5,13 +5,13 @@ import wget
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Yukki import BOT_ID, SUDOERS, app
+from Venz import BOT_ID, SUDOERS, app
 
 __MODULE__ = "Speedtest"
 __HELP__ = """
 
 /speedtest 
-- Check Server Latency and Speed.
+- Periksa Latensi dan Kecepatan Server.
 
 """
 
@@ -31,13 +31,13 @@ def bytes(size: float) -> str:
 
 @app.on_message(filters.command("speedtest") & ~filters.edited)
 async def statsguwid(_, message):
-    m = await message.reply_text("Running Speed test")
+    m = await message.reply_text("Menjalankan Tes Kecepatan")
     try:
         test = speedtest.Speedtest()
         test.get_best_server()
-        m = await m.edit("Running Download SpeedTest")
+        m = await m.edit("Menjalankan Unduh Tes Kecepatan")
         test.download()
-        m = await m.edit("Running Upload SpeedTest")
+        m = await m.edit("Menjalankan Tes Kecepatan Unggah")
         test.upload()
         test.results.share()
         result = test.results.dict()
@@ -46,17 +46,17 @@ async def statsguwid(_, message):
     m = await m.edit("Sharing SpeedTest Results")
     path = wget.download(result["share"])
 
-    output = f"""**Speedtest Results**
+    output = f"""**Hasil Speedtest**
     
 <u>**Client:**</u>
 **__ISP:__** {result['client']['isp']}
-**__Country:__** {result['client']['country']}
+**__Negara:__** {result['client']['country']}
   
 <u>**Server:**</u>
-**__Name:__** {result['server']['name']}
-**__Country:__** {result['server']['country']}, {result['server']['cc']}
+**__Nama:__** {result['server']['name']}
+**__Negara:__** {result['server']['country']}, {result['server']['cc']}
 **__Sponsor:__** {result['server']['sponsor']}
-**__Latency:__** {result['server']['latency']}  
+**__Latensi:__** {result['server']['latency']}  
 **__Ping:__** {result['ping']}"""
     msg = await app.send_photo(
         chat_id=message.chat.id, photo=path, caption=output
