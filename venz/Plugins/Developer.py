@@ -13,8 +13,8 @@ from pyrogram.errors import MessageNotModified
 from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             Message, ReplyKeyboardMarkup)
 
-from Yukki import SUDOERS, app
-from Yukki.Utilities.tasks import add_task, rm_task
+from Venz import SUDOERS, app
+from Venz.Utilities.tasks import add_task, rm_task
 
 # Eval and Sh module from WBB
 
