@@ -1,6 +1,6 @@
-from Yukki.Core.Clients.cli import LOG_CLIENT
+from Venz.Core.Clients.cli import LOG_CLIENT
 from config import LOG_GROUP_ID
-from Yukki.Database import is_on_off
+from Venz.Database import is_on_off
 
 
 def logging(mystic):
