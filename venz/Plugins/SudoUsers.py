@@ -9,8 +9,8 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import Message
 
-from Yukki import BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, BOT_USERNAME
-from Yukki.Database import (add_gban_user, add_off, add_on, add_sudo, set_video_limit,
+from Venz import BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, BOT_USERNAME
+from Venz.Database import (add_gban_user, add_off, add_on, add_sudo, set_video_limit,
                             get_active_chats, get_served_chats, get_sudoers,
                             is_gbanned_user, remove_active_chat,
                             remove_gban_user, remove_served_chat, remove_sudo)
@@ -20,30 +20,30 @@ __HELP__ = """
 
 
 /sudolist 
-    Check the sudo user list of Bot. 
+    Periksa daftar pengguna sudo Bot. 
 
 
 **Note:**
-Only for Sudo Users. 
+Hanya untuk Pengguna Sudo. 
 
 
 /addsudo [Username or Reply to a user]
-- To Add A User In Bot's Sudo Users.
+- Untuk Menambahkan Pengguna Di Pengguna Sudo Bot.
 
 /delsudo [Username or Reply to a user]
-- To Remove A User from Bot's Sudo Users.
+- Untuk Menghapus Pengguna dari Pengguna Sudo Bot.
 
 /restart 
-- Restart Bot [All downloads, cache, raw files will be cleared too]. 
+- Mulai ulang Bot [Semua unduhan, cache, file mentah akan dihapus juga]. 
 
 /maintenance [enable / disable]
-- When enabled Bot goes under maintenance mode. No one can play Music now!
+- Saat diaktifkan, Bot berada dalam mode pemeliharaan. Tidak ada yang bisa memutar Musik sekarang!
 
 /logger [enable / disable]
-- When enabled Bot logs the searched queries in logger group.
+- Saat diaktifkan, Bot mencatat kueri yang dicari di grup logger.
 
 /clean
-- Clean Temp Files and Logs.
+- Bersihkan File dan Log Temp.
 """
 # Add Sudo Users!
 
@@ -53,7 +53,7 @@ async def useradd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "Membalas pesan pengguna atau memberikan nama pengguna/user_id."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -62,12 +62,12 @@ async def useradd(_, message: Message):
         user = await app.get_users(user)
         if user.id in SUDOERS:
             return await message.reply_text(
-                f"{user.mention} is already a sudo user."
+                f"{user.mention} sudah menjadi pengguna sudo."
             )
         added = await add_sudo(user.id)
         if added:
             await message.reply_text(
-                f"Added **{user.mention}** to Sudo Users."
+                f"Ditambahkan **{user.mention}** untuk Pengguna Sudo."
             )
             os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
         else:
@@ -75,12 +75,12 @@ async def useradd(_, message: Message):
         return
     if message.reply_to_message.from_user.id in SUDOERS:
         return await message.reply_text(
-            f"{message.reply_to_message.from_user.mention} is already a sudo user."
+            f"{message.reply_to_message.from_user.mention} sudah menjadi pengguna sudo."
         )
     added = await add_sudo(message.reply_to_message.from_user.id)
     if added:
         await message.reply_text(
-            f"Added **{message.reply_to_message.from_user.mention}** to Sudo Users"
+            f"Ditambahkan **{message.reply_to_message.from_user.mention}** untuk Pengguna Sudo"
         )
         os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
     else:
@@ -93,7 +93,7 @@ async def userdel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "Membalas pesan pengguna atau memberikan nama pengguna/user_id."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -106,25 +106,25 @@ async def userdel(_, message: Message):
         removed = await remove_sudo(user.id)
         if removed:
             await message.reply_text(
-                f"Removed **{user.mention}** from {MUSIC_BOT_NAME}'s Sudo."
+                f"DIHAPUS **{user.mention}** dari {MUSIC_BOT_NAME}'s Venz."
             )
-            return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
-        await message.reply_text(f"Something wrong happened.")
+            return os.system(f"kill -9 {os.getpid()} && python3 -m Venz")
+        await message.reply_text(f"Sesuatu yang salah terjadi.")
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
     mention = message.reply_to_message.from_user.mention
     if user_id not in SUDOERS:
         return await message.reply_text(
-            f"Not a part of {MUSIC_BOT_NAME}'s Sudo."
+            f"Bukan bagian dari {MUSIC_BOT_NAME}'s Sudo."
         )
     removed = await remove_sudo(user_id)
     if removed:
         await message.reply_text(
-            f"Removed **{mention}** from {MUSIC_BOT_NAME}'s Sudo."
+            f"DIHAPUS **{mention}** dari {MUSIC_BOT_NAME}'s Sudo."
         )
         return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
-    await message.reply_text(f"Something wrong happened.")
+    await message.reply_text(f"Sesuatu yang salah terjadi.")
 
 
 @app.on_message(filters.command("sudolist"))
@@ -176,7 +176,7 @@ async def set_video_limit_kid(_, message: Message):
     await message.reply_text(f"Video Calls Maximum Limit Defined to {limit} Chats.")
 
 
-## Maintenance Yukki
+## Maintenance Venz
 
 
 @app.on_message(filters.command("maintenance") & filters.user(SUDOERS))
