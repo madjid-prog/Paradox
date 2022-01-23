@@ -6,8 +6,8 @@ import psutil
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Venz import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
-from Venz.Utilities.ping import get_readable_time
+from venz import BOT_USERNAME, MUSIC_BOT_NAME, app, boottime
+from venz.Utilities.ping import get_readable_time
 
 __MODULE__ = "Ping"
 __HELP__ = """
