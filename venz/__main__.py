@@ -339,7 +339,7 @@ async def start_command(_, message):
         umention = f"[{sender_name}](tg://user?id={int(sender_id)})"
         return await LOG_CLIENT.send_message(LOG_GROUP_ID, f"{message.from_user.mention} has just started Bot.\n\n**USER ID:** {sender_id}\n**USER NAME:** {sender_name}")
     return
-
+    )
     
 
 async def help_parser(name, keyboard=None):
