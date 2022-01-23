@@ -5,7 +5,7 @@ import wget
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Venz import BOT_ID, SUDOERS, app
+from venz import BOT_ID, SUDOERS, app
 
 __MODULE__ = "Speedtest"
 __HELP__ = """
