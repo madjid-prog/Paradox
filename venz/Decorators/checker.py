@@ -1,5 +1,5 @@
-from Venz import BOT_USERNAME, LOG_GROUP_ID, app
-from Venz.Database import blacklisted_chats, is_gbanned_user, is_on_off
+from venz import BOT_USERNAME, LOG_GROUP_ID, app
+from venz.Database import blacklisted_chats, is_gbanned_user, is_on_off
 
 
 def checker(mystic):
