@@ -3,14 +3,14 @@ from pyrogram.types import (InlineKeyboardButton, InlineKeyboardMarkup,
                             KeyboardButton, Message, ReplyKeyboardMarkup,
                             ReplyKeyboardRemove)
 
-from Venz import BOT_ID, BOT_USERNAME, MUSIC_BOT_NAME, SUDOERS, app, db_mem
-from Venz.Database import (_get_playlists, delete_playlist, get_playlist,
+from venz import BOT_ID, BOT_USERNAME, MUSIC_BOT_NAME, SUDOERS, app, db_mem
+from venz.Database import (_get_playlists, delete_playlist, get_playlist,
                             get_playlist_names, save_playlist)
-from Venz.Decorators.admins import AdminRightsCheck
-from Venz.Decorators.assistant import AssistantAdd
-from Venz.Decorators.checker import checker, checkerCB
-from Venz.Decorators.permission import PermissionCheck
-from Venz.Inline import (add_genre_markup, check_genre_markup, check_markup,
+from venz.Decorators.admins import AdminRightsCheck
+from venz.Decorators.assistant import AssistantAdd
+from venz.Decorators.checker import checker, checkerCB
+from venz.Decorators.permission import PermissionCheck
+from venz.Inline import (add_genre_markup, check_genre_markup, check_markup,
                           delete_playlist_markuup, download_markup,
                           others_markup, play_genre_playlist, playlist_markup,
                           third_playlist_markup)
