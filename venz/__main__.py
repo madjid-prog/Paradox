@@ -2,7 +2,7 @@ import asyncio
 import importlib
 import os
 import re
-from venz.Core.Clients.cli import LOG_CLIENT
+from Venz.Core.Clients.cli import LOG_CLIENT
 
 from config import LOG_GROUP_ID
 from pyrogram import filters
@@ -13,17 +13,17 @@ from rich.table import Table
 from youtubesearchpython import VideosSearch
 
 from config import LOG_GROUP_ID, STRING5, STRING4, STRING3, STRING2, STRING1, LOG_SESSION
-from venz import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5, LOG_CLIENT,
+from Venz import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5, LOG_CLIENT,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2, OWNER_ID,
                    ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, app)
 
 
-from venz.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
+from Venz.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
                                         pytgcalls4, pytgcalls5)
-from venz.Database import get_active_chats, get_sudoers, remove_active_chat, get_active_video_chats, remove_active_video_chat, is_on_off
-from venz.Inline import private_panel
-from venz.Plugins import ALL_MODULES
-from venz.Utilities.inline import paginate_modules
+from Venz.Database import get_active_chats, get_sudoers, remove_active_chat, get_active_video_chats, remove_active_video_chat, is_on_off
+from Venz.Inline import private_panel
+from Venz.Plugins import ALL_MODULES
+from Venz.Utilities.inline import paginate_modules
 
 loop = asyncio.get_event_loop()
 console = Console()
@@ -59,7 +59,7 @@ async def initiate_bot():
         )
         for all_module in ALL_MODULES:
             imported_module = importlib.import_module(
-                "Yukki.Plugins." + all_module
+                "Venz.Plugins." + all_module
             )
             if (
                 hasattr(imported_module, "__MODULE__")
@@ -292,24 +292,24 @@ async def start_command(_, message):
             searched_text = f"""
 🔍__**Video Track Information**__
 
-❇️**Title:** {title}
+❇️**Judul:** {title}
 
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+⏳**Durasi:** {duration} Mins
+👀**Tampilan:** `{views}`
+⏰**Diterbitkan Time:** {published}
+🎥**Nama Channel:** {channel}
+📎**Link Channel:** [Visit From Here]({channellink})
+🔗**Link Vidio:** [Link]({link})
 
 ⚡️ __Searched Powered By {BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="🎥 Tonton Video Youtube", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🔄 Tutup", callback_data="close"
                         ),
                     ],
                 ]
@@ -390,10 +390,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="↪️ Kembali", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="🔄 Tutup", callback_data="close"
                     ),
                 ],
             ]
