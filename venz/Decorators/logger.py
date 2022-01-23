@@ -1,6 +1,6 @@
-from Venz.Core.Clients.cli import LOG_CLIENT
+from venz.Core.Clients.cli import LOG_CLIENT
 from config import LOG_GROUP_ID
-from Venz.Database import is_on_off
+from venz.Database import is_on_off
 
 
 def logging(mystic):
