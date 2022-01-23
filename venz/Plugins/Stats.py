@@ -18,13 +18,13 @@ from pyrogram.types import Message
 from pymongo import MongoClient
 from config import MONGO_DB_URI, MUSIC_BOT_NAME
 from config import STRING5, STRING4, STRING3, STRING2, STRING1
-from Venz import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
+from venz import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    BOT_ID, MUSIC_BOT_NAME, SUDOERS, app, boottime)
-from Venz.Database import get_gbans_count, get_served_chats, get_sudoers
-from Venz.Inline import (stats1, stats2, stats3, stats4, stats5, stats6,
+from venz.Database import get_gbans_count, get_served_chats, get_sudoers
+from venz.Inline import (stats1, stats2, stats3, stats4, stats5, stats6,
                           stats7)
-from Venz.Plugins import ALL_MODULES
-from Venz.Utilities.ping import get_readable_time
+from venz.Plugins import ALL_MODULES
+from venz.Utilities.ping import get_readable_time
 
 __MODULE__ = "Stats"
 __HELP__ = """
