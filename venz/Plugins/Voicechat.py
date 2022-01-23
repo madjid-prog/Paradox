@@ -9,12 +9,12 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 
 from config import get_queue
-from Venz import SUDOERS, app, db_mem, random_assistant
-from Venz.Database import (get_active_chats, get_assistant, is_active_chat,
+from venz import SUDOERS, app, db_mem, random_assistant
+from venz.Database import (get_active_chats, get_assistant, is_active_chat,
                             save_assistant)
-from Venz.Decorators.checker import checker, checkerCB
-from Venz.Inline import primary_markup
-from Venz.Utilities.assistant import get_assistant_details
+from venz.Decorators.checker import checker, checkerCB
+from venz.Inline import primary_markup
+from venz.Utilities.assistant import get_assistant_details
 
 loop = asyncio.get_event_loop()
 
