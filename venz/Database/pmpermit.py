@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Venz import db
+from venz import db
 
 pmpermitdb = db.permit
 
