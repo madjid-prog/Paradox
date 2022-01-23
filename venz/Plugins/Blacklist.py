@@ -1,8 +1,8 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from Venz import SUDOERS, app
-from Venz.Database import blacklist_chat, blacklisted_chats, whitelist_chat
+from venz import SUDOERS, app
+from venz.Database import blacklist_chat, blacklisted_chats, whitelist_chat
 
 __MODULE__ = "Blacklist"
 __HELP__ = """
