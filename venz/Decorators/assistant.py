@@ -3,9 +3,9 @@ from typing import Dict, List, Union
 
 from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 
-from Venz import MUSIC_BOT_NAME, app, random_assistant
-from Venz.Database import get_assistant, save_assistant
-from Venz.Utilities.assistant import get_assistant_details
+from venz import MUSIC_BOT_NAME, app, random_assistant
+from venz.Database import get_assistant, save_assistant
+from venz.Utilities.assistant import get_assistant_details
 
 
 def AssistantAdd(mystic):
