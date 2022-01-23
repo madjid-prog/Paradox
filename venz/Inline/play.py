@@ -1,7 +1,7 @@
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from Venz import db_mem
+from venz import db_mem
 
 
 def url_markup(videoid, duration, user_id, query, query_type):
