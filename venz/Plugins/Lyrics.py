@@ -6,7 +6,7 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from youtubesearchpython import VideosSearch
 
-from Venz import MUSIC_BOT_NAME, app
+from venz import MUSIC_BOT_NAME, app
 
 __MODULE__ = "Lyrics"
 __HELP__ = """
