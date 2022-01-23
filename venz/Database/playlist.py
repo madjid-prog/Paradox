@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Venz import db
+from venz import db
 
 playlistdb_lofi = db.playlistlofi
 playlistdb_rock = db.playlistrock
