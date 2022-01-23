@@ -13,7 +13,7 @@ from venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
 from venz.Core.PyTgCalls import Queues
 from venz.Core.PyTgCalls.Converter import convert
 from venz.Core.PyTgCalls.Downloader import download
-from venz.Core.PyTgCalls.Yukki import (pause_stream, resume_stream, skip_video_stream,
+from venz.Core.PyTgCalls.venz import (pause_stream, resume_stream, skip_video_stream,
                                         skip_stream, stop_stream)
 from venz.Database import (is_active_chat, is_music_playing, music_off, remove_active_video_chat,
                             music_on, remove_active_chat)
