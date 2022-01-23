@@ -7,9 +7,9 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineQueryResultPhoto, InputTextMessageContent,
                             Message)
 
-from Venz import SUDOERS, app, ASSISTANT_PREFIX, random_assistant
-from Venz.Database import get_assistant, save_assistant
-from Venz.Utilities.assistant import get_assistant_details
+from venz import SUDOERS, app, ASSISTANT_PREFIX, random_assistant
+from venz.Database import get_assistant, save_assistant
+from venz.Utilities.assistant import get_assistant_details
 
 
 __MODULE__ = "Assistant"
