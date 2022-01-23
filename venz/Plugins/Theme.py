@@ -2,9 +2,9 @@ from typing import Dict, List, Union
 
 from pyrogram import Client, filters
 
-from Venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db
-from Venz.Database import _get_theme, get_theme, save_theme
-from Venz.Decorators.permission import PermissionCheck
+from venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db
+from venz.Database import _get_theme, get_theme, save_theme
+from venz.Decorators.permission import PermissionCheck
 
 themes = [
     "blue",
