@@ -1,6 +1,6 @@
 from pyrogram import filters
-from Venz import app, LOG_GROUP_ID, SUDOERS, OWNER_ID
-from Venz.Database import is_on_off
+from venz import app, LOG_GROUP_ID, SUDOERS, OWNER_ID
+from venz.Database import is_on_off
 
 
 @app.on_message(filters.private & ~filters.user(SUDOERS))
