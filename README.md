@@ -19,7 +19,7 @@
 </h3>
 
 <p align="center">
-    A Support Group and ready-to-use running instance of this bot can be found on Telegram <br>
+    Grup Dukungan dan instance bot yang berjalan siap pakai ini dapat ditemukan di Telegram <br>
     <a href="https://t.me/venzastreambot"> venz X bot </a> |
     <a href="https://t.me/justvenzzz"> VenzSupport </a>
 </p>
@@ -28,7 +28,7 @@
    Deployment
 </h1>
 
-## 🔗 Requirements
+## 🔗 Persyaratan
 
 - [Python3.9](https://www.python.org/downloads/release/python-390/)
 - [Telegram API Key](https://docs.pyrogram.org/intro/setup#api-keys)
@@ -44,33 +44,32 @@
 <p>
 <a href="https://replit.com/@AaravxD/PyroStringSession#main.py"><img src="https://img.shields.io/badge/Generate%20On%20Repl-blueviolet?style=for-the-badge&logo=appveyor" width="245""/></a>
 
-## Contact & Support
+## Kontak & Dukungan
 
 
 - [Telegram Channel](https://t.me/someonefromyou")
 - [Telegram Support Group](https://t.me/justvenzzz)
 - [Contact Owner](https://t.me/vnotv)
 
-## Why venz?
+## Mengapa venz?
     
-- Light and Fast Responsive
-- Includes Multi-Assistant Mode where you can use 5 Assistant Accounts for large number of chats.
-- Mongo DB based Queues, Playlists, Chats.
-- Video Calls and Voice Calls Merged with a single command.
-- Live Timer Progress Bar for playouts in a interactive inline mode.
-- Heroku-Supported Added including vars addition, deletion, getting logs etc.
-- Interactive UI, fonts and thumbnails.
+- Ringan dan Responsif Cepat
+- Antrian, Daftar Putar, Obrolan berbasis Mongodb.
+- Panggilan Video dan Panggilan Suara Digabung dengan satu perintah.
+- Bilah Kemajuan Timer Langsung untuk pemutaran dalam mode sebaris interaktif.
+- Ditambahkan Heroku-Didukung termasuk penambahan vars, penghapusan, mendapatkan log dll.
+- UI interaktif, font, dan thumbnail.
 
 ## License
 
-Distributed under the [GNU General Public License v3.0 License.](https://github.com/notreallyshikhar/YukkiMusicBot/blob/main/LICENSE) See `LICENSE.md` for more information.
+Distributed under the [GNU General Public License v3.0 License.](https://github.com/eldy020502/officialvenz/blob/main/LICENSE) See `LICENSE.md` for more information.
 
-## Acknowledgements
+## ucapan terima kasih
 
-Special thanks to these amazing projects/people which/who help power Venz Music Bot:
-
+Terima kasih khusus untuk proyek/orang luar biasa ini yang/yang membantu memberi daya pada Venz Music Bot:
+  
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 - [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
 - [CallsMusic Team](https://github.com/Callsmusic)
 - [TheHamkerCat](https://github.com/TheHamkerCat)
-- [Notreallyshikhar](https://github.com/Notreallyshikhar)
+- [Notreallyshikhar](https://github.com/Notreallyshikhar) (My idol)
