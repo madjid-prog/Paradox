@@ -73,4 +73,4 @@ Special thanks to these amazing projects/people which/who help power Venz Music 
 - [Py-Tgcalls](https://github.com/pytgcalls/pytgcalls)
 - [CallsMusic Team](https://github.com/Callsmusic)
 - [TheHamkerCat](https://github.com/TheHamkerCat)
-- [Notreallyshinkar](https://github.com/Notreallyshinkar)
+- [Notreallyshikhar](https://github.com/Notreallyshikhar)
