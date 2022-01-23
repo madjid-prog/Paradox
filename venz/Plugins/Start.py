@@ -9,22 +9,22 @@ from pyrogram import filters
 from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, InputMediaPhoto, Message)
 
-from Venz import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, random_assistant
-from Venz import boottime as bot_start_time
-from Venz import db
-from Venz.Core.PyTgCalls import Yukki
-from Venz.Database import (add_nonadmin_chat, add_served_chat,
+from venz import ASSIDS, BOT_ID, MUSIC_BOT_NAME, OWNER_ID, SUDOERS, app, random_assistant
+from venz import boottime as bot_start_time
+from venz import db
+from venz.Core.PyTgCalls import venz
+from venz.Database import (add_nonadmin_chat, add_served_chat,
                             blacklisted_chats, get_assistant, get_authuser,
                             get_authuser_names, get_start, is_nonadmin_chat,
                             is_served_chat, remove_active_chat,
                             remove_nonadmin_chat, save_assistant, save_start)
-from Venz.Decorators.admins import ActualAdminCB
-from Venz.Decorators.permission import PermissionCheck
-from Venz.Inline import (custommarkup, dashmarkup, setting_markup,
+from venz.Decorators.admins import ActualAdminCB
+from venz.Decorators.permission import PermissionCheck
+from venz.Inline import (custommarkup, dashmarkup, setting_markup,
                           setting_markup2, start_pannel, usermarkup,
                           volmarkup)
-from Venz.Utilities.assistant import get_assistant_details
-from Venz.Utilities.ping import get_readable_time
+from venz.Utilities.assistant import get_assistant_details
+from venz.Utilities.ping import get_readable_time
 
 welcome_group = 2
 
