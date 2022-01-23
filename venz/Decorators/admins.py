@@ -1,11 +1,11 @@
 from typing import Dict, List, Union
 
-from Venz import SUDOERS, app
-from Venz.Database import (_get_authusers, add_nonadmin_chat,
+from venz import SUDOERS, app
+from venz.Database import (_get_authusers, add_nonadmin_chat,
                             delete_authuser, get_authuser, get_authuser_count,
                             get_authuser_names, is_nonadmin_chat,
                             remove_nonadmin_chat, save_authuser)
-from Venz.Utilities.changers import int_to_alpha
+from venz.Utilities.changers import int_to_alpha
 
 
 def AdminRightsCheck(mystic):
