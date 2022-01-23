@@ -7,29 +7,29 @@ from pyrogram import filters
 from pyrogram.types import InlineKeyboardMarkup
 
 from config import get_queue
-from Venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
-from Venz.Core.PyTgCalls import Queues
-from Venz.Core.PyTgCalls.Converter import convert
-from Venz.Core.PyTgCalls.Downloader import download
-from Venz.Core.PyTgCalls.Yukki import (join_stream, pause_stream, skip_video_stream,
+from venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
+from venz.Core.PyTgCalls import Queues
+from venz.Core.PyTgCalls.Converter import convert
+from venz.Core.PyTgCalls.Downloader import download
+from venz.Core.PyTgCalls.venz import (join_stream, pause_stream, skip_video_stream,
                                         resume_stream, skip_stream,
                                         stop_stream)
-from Venz.Database import (_get_playlists, delete_playlist, get_playlist,
+from venz.Database import (_get_playlists, delete_playlist, get_playlist,
                             get_playlist_names, is_active_chat, save_playlist)
-from Venz.Database.queue import (add_active_chat, is_active_chat,
+from venz.Database.queue import (add_active_chat, is_active_chat,
                                   is_music_playing, music_off, music_on,
                                   remove_active_chat)
-from Venz.Decorators.admins import AdminRightsCheckCB
-from Venz.Decorators.checker import checkerCB
-from Venz.Inline import (audio_markup, audio_markup2, download_markup, secondary_markup2,
+from venz.Decorators.admins import AdminRightsCheckCB
+from venz.Decorators.checker import checkerCB
+from venz.Inline import (audio_markup, audio_markup2, download_markup, secondary_markup2,
                           fetch_playlist, paste_queue_markup, primary_markup)
-from Venz.Utilities.changers import time_to_seconds
-from Venz.Utilities.chat import specialfont_to_normal
-from Venz.Utilities.paste import isPreviewUp, paste_queue
-from Venz.Utilities.theme import check_theme
-from Venz.Utilities.thumbnails import gen_thumb
-from Venz.Utilities.timer import start_timer
-from Venz.Utilities.youtube import get_yt_info_id, get_m3u8
+from venz.Utilities.changers import time_to_seconds
+from venz.Utilities.chat import specialfont_to_normal
+from venz.Utilities.paste import isPreviewUp, paste_queue
+from venz.Utilities.theme import check_theme
+from venz.Utilities.thumbnails import gen_thumb
+from venz.Utilities.timer import start_timer
+from venz.Utilities.youtube import get_yt_info_id, get_m3u8
 
 loop = asyncio.get_event_loop()
 
