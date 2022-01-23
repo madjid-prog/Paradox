@@ -9,14 +9,14 @@ from config import get_queue
 from pyrogram.types import InlineKeyboardMarkup
 
 
-from Venz import BOT_USERNAME, db_mem
-from Venz.Core.PyTgCalls import Queues
-from Venz.Core.PyTgCalls.Yukki import join_live_stream, join_video_stream, stop_stream
-from Venz.Database import (add_active_chat, is_active_chat, music_off, remove_active_chat, add_active_video_chat,
+from venz import BOT_USERNAME, db_mem
+from venz.Core.PyTgCalls import Queues
+from venz.Core.PyTgCalls.venz import join_live_stream, join_video_stream, stop_stream
+from venz.Database import (add_active_chat, is_active_chat, music_off, remove_active_chat, add_active_video_chat,
                             music_on)
-from Venz.Inline import (audio_markup, audio_markup2, primary_markup, secondary_markup2,
+from venz.Inline import (audio_markup, audio_markup2, primary_markup, secondary_markup2,
                           secondary_markup)
-from Venz.Utilities.timer import start_timer
+from venz.Utilities.timer import start_timer
 
 loop = asyncio.get_event_loop()
 
