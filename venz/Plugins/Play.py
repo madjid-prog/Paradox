@@ -6,25 +6,25 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 
-from Venz import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from venz import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
-from Venz.Core.PyTgCalls.Converter import convert
-from Venz.Core.PyTgCalls.Downloader import download
-from Venz.Decorators.assistant import AssistantAdd
-from Venz.Decorators.checker import checker
-from Venz.Decorators.logger import logging
-from Venz.Decorators.permission import PermissionCheck
-from Venz.Database import get_video_limit, get_active_video_chats, is_active_video_chat
-from Venz.Inline import (playlist_markup, search_markup, search_markup2, livestream_markup,
+from venz.Core.PyTgCalls.Converter import convert
+from venz.Core.PyTgCalls.Downloader import download
+from venz.Decorators.assistant import AssistantAdd
+from venz.Decorators.checker import checker
+from venz.Decorators.logger import logging
+from venz.Decorators.permission import PermissionCheck
+from venz.Database import get_video_limit, get_active_video_chats, is_active_video_chat
+from venz.Inline import (playlist_markup, search_markup, search_markup2, livestream_markup,
                           url_markup, url_markup2)
-from Venz.Utilities.changers import seconds_to_min, time_to_seconds
-from Venz.Utilities.chat import specialfont_to_normal
-from Venz.Utilities.stream import start_stream, start_stream_audio
-from Venz.Utilities.videostream import start_stream_video
-from Venz.Utilities.theme import check_theme
-from Venz.Utilities.thumbnails import gen_thumb
-from Venz.Utilities.url import get_url
-from Venz.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
+from venz.Utilities.changers import seconds_to_min, time_to_seconds
+from venz.Utilities.chat import specialfont_to_normal
+from venz.Utilities.stream import start_stream, start_stream_audio
+from venz.Utilities.videostream import start_stream_video
+from venz.Utilities.theme import check_theme
+from venz.Utilities.thumbnails import gen_thumb
+from venz.Utilities.url import get_url
+from venz.Utilities.youtube import (get_yt_info_id, get_yt_info_query,
                                      get_yt_info_query_slider)
 
 loop = asyncio.get_event_loop()
