@@ -1,6 +1,6 @@
 import random
 
-from Venz.Database import get_theme
+from venz.Database import get_theme
 
 themes = [
     "blue",
