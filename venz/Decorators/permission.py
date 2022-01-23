@@ -1,6 +1,6 @@
 from typing import Dict, List, Union
 
-from Venz import BOT_ID, app
+from venz import BOT_ID, app
 
 
 def PermissionCheck(mystic):
