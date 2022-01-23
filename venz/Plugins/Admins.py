@@ -9,26 +9,26 @@ from pyrogram.types import (CallbackQuery, InlineKeyboardButton,
                             InlineKeyboardMarkup, KeyboardButton, Message,
                             ReplyKeyboardMarkup, ReplyKeyboardRemove)
 
-from Venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
-from Venz.Core.PyTgCalls import Queues
-from Venz.Core.PyTgCalls.Converter import convert
-from Venz.Core.PyTgCalls.Downloader import download
-from Venz.Core.PyTgCalls.Yukki import (pause_stream, resume_stream, skip_video_stream,
+from venz import BOT_USERNAME, MUSIC_BOT_NAME, app, db_mem
+from venz.Core.PyTgCalls import Queues
+from venz.Core.PyTgCalls.Converter import convert
+from venz.Core.PyTgCalls.Downloader import download
+from venz.Core.PyTgCalls.Yukki import (pause_stream, resume_stream, skip_video_stream,
                                         skip_stream, stop_stream)
-from Venz.Database import (is_active_chat, is_music_playing, music_off, remove_active_video_chat,
+from venz.Database import (is_active_chat, is_music_playing, music_off, remove_active_video_chat,
                             music_on, remove_active_chat)
-from Venz.Decorators.admins import AdminRightsCheck
-from Venz.Decorators.checker import checker, checkerCB
-from Venz.Inline import audio_markup, primary_markup, secondary_markup2
-from Venz.Utilities.changers import time_to_seconds
-from Venz.Utilities.chat import specialfont_to_normal
-from Venz.Utilities.theme import check_theme
-from Venz.Utilities.thumbnails import gen_thumb
-from Venz.Utilities.timer import start_timer
-from Venz.Utilities.youtube import get_yt_info_id
+from venz.Decorators.admins import AdminRightsCheck
+from venz.Decorators.checker import checker, checkerCB
+from venz.Inline import audio_markup, primary_markup, secondary_markup2
+from venz.Utilities.changers import time_to_seconds
+from venz.Utilities.chat import specialfont_to_normal
+from venz.Utilities.theme import check_theme
+from venz.Utilities.thumbnails import gen_thumb
+from venz.Utilities.timer import start_timer
+from venz.Utilities.youtube import get_yt_info_id
 
 
-from Venz.Utilities.youtube import get_m3u8
+from venz.Utilities.youtube import get_m3u8
 
 loop = asyncio.get_event_loop()
 
