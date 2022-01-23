@@ -59,7 +59,7 @@ async def initiate_bot():
         )
         for all_module in ALL_MODULES:
             imported_module = importlib.import_module(
-                "Venz.Plugins." + all_module
+                "venz.Plugins." + all_module
             )
             if (
                 hasattr(imported_module, "__MODULE__")
