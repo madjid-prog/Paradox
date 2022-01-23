@@ -6,12 +6,12 @@ from pyrogram.types import (InlineKeyboardMarkup, InputMediaPhoto, Message,
                             Voice)
 from youtube_search import YoutubeSearch
 
-from Venz import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
+from venz import (BOT_USERNAME, DURATION_LIMIT, DURATION_LIMIT_MIN,
                    MUSIC_BOT_NAME, app, db_mem)
-from Venz.Decorators.permission import PermissionCheck
-from Venz.Inline import song_download_markup, song_markup
-from Venz.Utilities.url import get_url
-from Venz.Utilities.youtube import (get_yt_info_query,
+from venz.Decorators.permission import PermissionCheck
+from venz.Inline import song_download_markup, song_markup
+from venz.Utilities.url import get_url
+from venz.Utilities.youtube import (get_yt_info_query,
                                      get_yt_info_query_slider)
 
 loop = asyncio.get_event_loop()
