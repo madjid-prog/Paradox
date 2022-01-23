@@ -15,11 +15,11 @@ from time import time, strftime
 from pyrogram import Client, filters
 
 from config import HEROKU_API_KEY, HEROKU_APP_NAME, UPSTREAM_BRANCH, UPSTREAM_REPO
-from Venz import app, SUDOERS, LOG_GROUP_ID, MUSIC_BOT_NAME
-from Venz.Utilities.heroku import is_heroku, user_input
-from Venz.Utilities.paste import isPreviewUp, paste_queue
+from venz import app, SUDOERS, LOG_GROUP_ID, MUSIC_BOT_NAME
+from venz.Utilities.heroku import is_heroku, user_input
+from venz.Utilities.paste import isPreviewUp, paste_queue
 from git.exc import GitCommandError, InvalidGitRepositoryError
-from Venz.Database import (get_active_chats, remove_active_chat)
+from venz.Database import (get_active_chats, remove_active_chat)
 
 from pyrogram.types import Message
 
